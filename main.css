@@ -1,0 +1,82 @@
+/*fonts
+font-family: 'Abril Fatface', cursive;
+font-family: 'Open Sans', sans-serif;
+*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  background-color: navy !important;
+  color: white;
+  border-radius: 0px !important;
+}
+header h1 {
+  font-size: 2rem;
+  font-family: 'Abril Fatface', cursive;
+}
+
+main {
+  flex: 1 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main h2 {
+  font-size: 1.75rem;
+  padding-left: 3%;
+}
+
+.brown {
+  color: saddlebrown;
+}
+
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  background-color: darkgreen;
+  height: 75px;
+}
+footer h3 {
+  font-size: 1.5rem;
+  vertical-align: center;
+  color: white;
+  padding-top: 10px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+@media (min-width: 450px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  main h2 {
+    font-size: 2rem;
+  }
+  footer h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 578px) {
+  main h2 {
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  main h2 {
+    font-size: 2.5rem;
+  }
+  footer h3 {
+    font-size: 2rem;
+  }
+}
