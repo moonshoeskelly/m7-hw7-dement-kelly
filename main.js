@@ -19,7 +19,12 @@ xmlhttp.onreadystatechange = function() {
 
         //Print the weather description at the end of the main section text
         var weatherNow = document.createTextNode(apiResult.weather[0].description)
-        console.log(apiResult.weather[0]);
+
+        var addWeather = document.querySelectorAll("main h2 span.brown");
+
+        console.log (addWeather[0].appendChild(weatherNow));
+
+
 
         //Hint: You will need to create a text node and append this data to an element in order to add it to add it to the DOM and show it on the page
 
