@@ -13,22 +13,18 @@ xmlhttp.onreadystatechange = function() {
         //Print the city name at the end of the header text
         var cityName = document.createTextNode(apiResult.name);
 
-        var addCity = document.querySelectorAll("header h1 span.brown");
+        var addCity = document.querySelectorAll("header h1 p.brown");
 
         addCity[0].appendChild(cityName);
 
         //Print the weather description at the end of the main section text
-        var weatherNow = document.createTextNode(apiResult.weather[0].description)
+        var weatherNow = document.createTextNode(apiResult.weather[0].description);
 
-        var addWeather = document.querySelectorAll("main h2 span.brown");
+        var addWeather = document.querySelectorAll("main h2 p.brown");
 
-        console.log (addWeather[0].appendChild(weatherNow));
-
-
-
-        //Hint: You will need to create a text node and append this data to an element in order to add it to add it to the DOM and show it on the page
-
+        addWeather[0].appendChild(weatherNow);
     }
 };
+
 xmlhttp.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=99501,us&appid=6efff70fe1477748e31c17d1c504635f', true);
 xmlhttp.send();
