@@ -10,7 +10,18 @@ xmlhttp.onreadystatechange = function() {
         // Storing API object inside of apiresult
         var apiResult = JSON.parse(this.responseText);
 
-        //Code Dealing With The API Data Goes Here
+        //Print the city name at the end of the header text
+        var cityName = document.createTextNode(apiResult.name);
+
+        var addCity = document.querySelectorAll("header h1 span.brown");
+
+        addCity[0].appendChild(cityName);
+
+        //Print the weather description at the end of the main section text
+        var weatherNow = document.createTextNode(apiResult.weather[0].description)
+        console.log(apiResult.weather[0]);
+
+        //Hint: You will need to create a text node and append this data to an element in order to add it to add it to the DOM and show it on the page
 
     }
 };
